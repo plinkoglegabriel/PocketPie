@@ -11,12 +11,12 @@ const App = () => {
     const [showPieChart, setShowPieChart] = useState(false);
     const [income, setIncome] = useState(2000); // default monthly income
     const [categories, setCategories] = useState([
-        { name: 'Rent', amount: 800 },
+        { name: 'Rent', amount: 900 },
         { name: 'Food', amount: 300 },
-        { name: 'Transport', amount: 100 },
-        { name: 'Utilities', amount: 100 },
-        { name: 'Entertainment', amount: 100 },
-        { name: 'Other', amount: 100 },
+        { name: 'Transport', amount: 200 },
+        { name: 'Utilities', amount: 200 },
+        { name: 'Entertainment', amount: 200 },
+        { name: 'Other', amount: 200 },
     ]);
 
     const handleStart = () => {

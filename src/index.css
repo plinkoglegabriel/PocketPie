@@ -67,6 +67,11 @@ button:focus-visible {
   height: 60%; 
 }
 
+.errormessage {
+  font-size: 2em;
+  margin-top: 1rem;
+}
+
 .welcome {
   font-size: 10em;;
 }
@@ -75,8 +80,12 @@ button:focus-visible {
   font-size: 3em;
 }
 
+.text {
+  font-size: 2em;
+}
+
 #fly {
-  margin-top: 5rem;
+  margin-top: 2rem;
   font-size: 3em;
 }
 

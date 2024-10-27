@@ -17,8 +17,8 @@ body {
 }
 
 .app {
-  width: 90vw; /* Make the app take up most of the viewport width */
-  height: 90vh; /* Make the app take up most of the viewport height */
+  width: 90vw; 
+  height: 90vh; 
   padding: 2rem;
   text-align: center;
   display: flex;
@@ -28,6 +28,7 @@ body {
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
 }
 
 .header {
@@ -56,10 +57,8 @@ h1 {
 }
 
 .pie-chart {
-  width: 60%; /* Increase the width to make the pie chart larger */
-  max-width: 600px;
+  width: 40%;
 }
-
 .pie-chart h2 {
   margin-bottom: 1rem;
 }

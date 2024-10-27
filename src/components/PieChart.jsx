@@ -27,7 +27,7 @@ const PieChart = ({ income, categories }) => {
 
     return (
         <div className="pie-chart">
-            <h2>Budget Allocation</h2>
+            <h2 className='formtitle'>Your Budget Allocation</h2>
             <Pie data={data} />
         </div>
     );

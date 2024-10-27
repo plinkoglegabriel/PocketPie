@@ -2,8 +2,8 @@ import React from 'react';
 
 const Header = () => (
   <header>
-    <h1>Pocket Pie</h1>
-    <p>London Student Budget Calculator</p>
+    {/* <h1>Pocket Pie</h1>
+    <p>London Student Budget Calculator</p> */}
   </header>
 );
 

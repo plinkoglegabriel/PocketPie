@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
 import Header from './components/Header';
 import PieChart from './components/PieChart';
+import WelcomePopup from './components/WelcomePopup';
+import FormPopup from './components/FormPopup';
 import './App.css';
 
 const App = () => {
-    const [income, setIncome] = useState(2000);  // default monthly income
+    const [showWelcome, setShowWelcome] = useState(true);
+    const [showForm, setShowForm] = useState(false);
+    const [showPieChart, setShowPieChart] = useState(false);
+    const [income, setIncome] = useState(2000); // default monthly income
     const [categories, setCategories] = useState([
         { name: 'Rent', amount: 800 },
         { name: 'Food', amount: 300 },
@@ -14,18 +19,24 @@ const App = () => {
         { name: 'Other', amount: 100 },
     ]);
 
+    const handleStart = () => {
+        setShowWelcome(false);
+        setShowForm(true);
+    };
+
+    const handleFormSubmit = (newIncome, newCategories) => {
+        setIncome(newIncome);
+        setCategories(newCategories);
+        setShowForm(false);
+        setShowPieChart(true);
+    };
+
     return (
         <div className="app">
             <Header />
-            <div className="income-input">
-                <label>Monthly Income: £</label>
-                <input
-                    type="number"
-                    value={income}
-                    onChange={(e) => setIncome(parseFloat(e.target.value))}
-                />
-            </div>
-            <PieChart income={income} categories={categories} />
+            {showWelcome && <WelcomePopup onStart={handleStart} />}
+            {showForm && <FormPopup onSubmit={handleFormSubmit} />}
+            {showPieChart && <PieChart income={income} categories={categories} />}
         </div>
     );
 };
